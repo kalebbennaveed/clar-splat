@@ -2,5 +2,3 @@
 	path = ActiveSplat
 	url = git@github.com:kalebbennaveed/ActiveSplat.git
 [submodule "safer-splat"]
-	path = safer-splat
-	url = git@github.com:kalebbennaveed/safer-splat.git
