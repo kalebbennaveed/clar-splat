@@ -179,9 +179,12 @@ You can observe the trajectories on viser. Furthermore, if you would like to exe
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/5fecad35-ac8e-4ff1-80dc-e7cc3cdbac20" width="45%" />
-  <img src="https://github.com/user-attachments/assets/122ca5d6-74c3-4036-911d-eeae8dd85b14" width="31%" />
+  <img src="https://github.com/user-attachments/assets/122ca5d6-74c3-4036-911d-eeae8dd85b14" width="30.6%" />
 </p>
 
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d03aebe4-7eb7-4f7f-bf25-ed9baf579266" width="45%" />
+  <img src="https://github.com/user-attachments/assets/b9b89e52-b069-467c-aeb3-a8b09a8e86b8" width="45" />
+</p>
 
 
