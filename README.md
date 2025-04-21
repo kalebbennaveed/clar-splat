@@ -41,18 +41,18 @@ docker compose up -d
 
 To build visual SLAM container follow the instructions on [ISAAC ROS Visual SLAM](https://nvidia-isaac-ros.github.io/repositories_and_packages/isaac_ros_visual_slam/isaac_ros_visual_slam/index.html#quickstart) website.
 
-Note: Make sure to build the repository from source as a few changes are needed to be made in the launch file explained further.
+Note: Make sure to build the repository from source as a few changes are needed to be made in the launch file explained further. And after restarting the docker make sure to follow the build the workspace and source it inside the container.
 
 ## Record Training Data
 
 First let's make some changes to the visual SLAM launch file
 
-'''
+```
 cd ~/workspaces/issac_ros_dev/src/issac_ros_visual_slam/launch
 gedit isaac_ros_visual_slam_realsense.launch.py 
-'''
+```
 
-Update the code realsense_camera_node section as:
+Update the realsense_camera_node section to:
 
 ```
 realsense_camera_node = Node(
@@ -78,3 +78,22 @@ realsense_camera_node = Node(
         }],
     )
 ```
+
+Note: If required change the topic mapping as visible upon listing all the topics.
+
+In Terminal 1 start the camera and visual slam node:
+
+```
+ros2 launch isaac_ros_visual_slam isaac_ros_visual_slam_realsense.launch.py
+```
+
+And simultaneouly on Terminal 2 record a bag file inside the visual SLAM container
+
+```
+ros2 bag record \
+/camera/depth/image_rect_raw/compressed \
+/camera/aligned_depth_to_color/image_raw \
+/visual_slam/tracking/odometry \
+-o <bag_name>
+```
+
