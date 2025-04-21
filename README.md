@@ -117,6 +117,8 @@ On Terminal 2 enter the following command to start spatfacto training model:
 ns-train ros-splatfacto --data configs/desk.json --pipeline.datamanager.use-compressed-rgb True --pipeline.datamanager.dataparser.scene-scale-factor 0.5 --pipeline.datamanager.data-update-freq 8.0
 ```
 
+Note: Make sure to update your camera intrinsics in desk.json using [camera_calibration](https://wiki.ros.org/camera_calibration). To explore more flags and other models make sure to check out [safer-splat](https://github.com/chengine/safer-splat/tree/master).
+
 After some initialization a message will appear stating that (NerfBridge) Images recieved: 0, at this point you should open the Nerfstudio viewer in a browser tab to visualize the Nerfacto model as it trains. Training will start after completing the next step.
 
 Now press the spacebar key to start playing the rosbag [Terminal 1]. Once the pre-training image buffer is filled (defaults to 10 images) then training should commence, and the usual Nerfstudio print messages will appear in Terminal 2.
