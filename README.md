@@ -26,7 +26,6 @@ Now build the Active Splat container for training:
 ```
 cd ~/ActiveSplat
 docker compose build
-docker compose up -d
 ```
 
 Similarly to build the Safe Splat container:
@@ -34,7 +33,6 @@ Similarly to build the Safe Splat container:
 ```
 cd ~/SafeSplat
 docker compose build
-docker compose up -d
 ```
 
 ### On Jetson
@@ -96,4 +94,32 @@ ros2 bag record \
 /visual_slam/tracking/odometry \
 -o <bag_name>
 ```
+
+## Training using GSplat
+
+Copy the bag file to your laptop inside the colcon_ws/ of ActiveSplat folder. Then on your laptop initialize the Active Splat container on two terminals using:
+
+```
+cd ~/clar-splat/ActiveSplat
+docker compose up -d
+docker exec -it <container_name> bash
+```
+
+On Termnial 1 play the bag file in paused mode (in pause mode a bag can be played by pressing spacebar):
+
+```
+ros2 bag play <bag_name> --start-paused
+```
+
+On Terminal 2 enter the following command to start spatfacto training model:
+
+```
+ns-train ros-splatfacto --data configs/desk.json --pipeline.datamanager.use-compressed-rgb True --pipeline.datamanager.dataparser.scene-scale-factor 0.5 --pipeline.datamanager.data-update-freq 8.0
+```
+
+After some initialization a message will appear stating that (NerfBridge) Images recieved: 0, at this point you should open the Nerfstudio viewer in a browser tab to visualize the Nerfacto model as it trains. Training will start after completing the next step.
+
+Now press the spacebar key to start playing the rosbag [Terminal 1]. Once the pre-training image buffer is filled (defaults to 10 images) then training should commence, and the usual Nerfstudio print messages will appear in Terminal 2.
+
+After the rosbag finishes playing NerfBridge will continue training the model on all of the data that it has recieved, but no new data will be added. Feel free to take images and video renders of your newly trained model.
 
