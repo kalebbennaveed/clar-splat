@@ -125,6 +125,36 @@ After the rosbag finishes playing NerfBridge will continue training the model on
 
 ## Running safety filter
 
-The below example is demonstrated for single-integrator dynamics which is ideal for mobile robots. If you want to explore double-integrator check out the instructions by [safer-splat]([https://github.com/chengine/safer-splat/tree/master]) authors.
+The below example is demonstrated for single-integrator dynamics which is ideal for mobile robots. If you want to explore double-integrator check out the instructions on [safer-splat](https://github.com/chengine/safer-splat/tree/master). We will similarly run the Safe Splat container and perforns steps to run various trajectories, perform filteration adn finally visualize them.
+
+```
+cd ~/clar-splat/SafeSplat/
+docker compose up -d
+docker exec -it <container_name> bash
+```
+
+In order to perform experiments with ease, follow the given steps:
+
+```
+cd ~/clar-splat/SafeSplat/colcon_ws/src/safer-splat/
+mkdir output
+cd output
+mkdir configs
+cd configs
+```
+
+Copy the trained model from the Active Splat folder inside the newly created configs folder.
+
+Make sure the folder has the following structure:
+
+```
+├──outputs                                                                                                                                           
+│   └── configs                                                                                                  
+│       └── ros-splatfacto                                                                                                                             
+│           └── <folder_name> (saved with the date you run it on)                                                                              
+│               └── nerfstudio_models
+|               └── config.yml
+|               └── dataparser_transforms.json # This file contains the transform that transforms from "Data" frame to "Nerfstudio" frame (which is typically a unit box)
+```
 
 
