@@ -167,7 +167,7 @@ Change the config path in both si_run.py and visualize.py under the dasc-lab if 
 python3 si_run.py
 ``` 
 
-Hurray! You have now reached the last step to visualize your results.
+Hurray! You have now reached the last step i.e. to visualize your results.
 
 ```
 python3 visualize.py
