@@ -44,7 +44,7 @@ docker compose build
 docker compose up -d
 ```
 
-To build Visual SLAM container follow the instructions on [ISAAC ROS Visual SLAM]([https://nvidia-isaac-ros.github.io/repositories_and_packages/isaac_ros_visual_slam/isaac_ros_visual_slam/index.html#quickstart]) website.
+To build Visual SLAM container follow the instructions on [ISAAC ROS Visual SLAM](https://nvidia-isaac-ros.github.io/repositories_and_packages/isaac_ros_visual_slam/isaac_ros_visual_slam/index.html#quickstart) website.
 
 Note: Make sure to build the repository from source as a few changes are needed to be made in the launch file explained further.
 
