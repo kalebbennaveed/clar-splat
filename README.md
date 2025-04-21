@@ -44,4 +44,6 @@ docker compose build
 docker compose up -d
 ```
 
-To build NVSLAM container follow the instructions on 
+To build NVSLAM container follow the instructions on [ISAAC ROS Visual SLAM](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_visual_slam) website.
+
+
