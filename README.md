@@ -137,8 +137,8 @@ In order to perform experiments with ease, follow the given steps:
 
 ```
 cd ~/clar-splat/SafeSplat/colcon_ws/src/safer-splat/
-mkdir output
-cd output
+mkdir outputs
+cd outputs
 mkdir configs
 cd configs
 ```
@@ -157,4 +157,16 @@ Make sure the folder has the following structure:
 |               └── dataparser_transforms.json # This file contains the transform that transforms from "Data" frame to "Nerfstudio" frame (which is typically a unit box)
 ```
 
+Change the config path in both si_run.py and visualize.py under the dasc-lab if condition. Now is the time you can finally perform filtering using our formulated cbf QP.
 
+```
+python3 si_run.py
+``` 
+
+Hurray! You have now reached the last step to visualize your results.
+
+```
+python3 visualize.py
+```
+
+You can observe the trajectories on viser. Furthermore, if you would like to exectue these trajectories you may write a simple waypoint follower for your robot to track the save trajectory inside the traj/ folder.
