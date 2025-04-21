@@ -161,7 +161,7 @@ Make sure the folder has the following structure:
 |               └── dataparser_transforms.json # This file contains the transform that transforms from "Data" frame to "Nerfstudio" frame (which is typically a unit box)
 ```
 
-Change the config path in both si_run.py and visualize.py under the dasc-lab if condition. Now is the time you can finally perform filtering using our formulated cbf QP.
+Change the config path in both si_run.py and visualize.py under the dasc-lab if condition. Now is the time you can finally perform filtering using our formulated CBF QP.
 
 ```
 python3 si_run.py
