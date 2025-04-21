@@ -177,6 +177,11 @@ You can observe the trajectories on viser. Furthermore, if you would like to exe
 
 ## Simulation Results
 
-![Stonehenge Screenshot Apr 19 2025](https://github.com/user-attachments/assets/5fecad35-ac8e-4ff1-80dc-e7cc3cdbac20) ![Stonehenge Screenshot Apr 19 2025 (1)](https://github.com/user-attachments/assets/122ca5d6-74c3-4036-911d-eeae8dd85b14)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5fecad35-ac8e-4ff1-80dc-e7cc3cdbac20" width="45%" />
+  <img src="https://github.com/user-attachments/assets/122ca5d6-74c3-4036-911d-eeae8dd85b14" width="45%" />
+</p>
+
+
 
 
