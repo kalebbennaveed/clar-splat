@@ -5,7 +5,6 @@ This project extends SaferSplat with a simplified and efficient Control Barrier 
 
 ![poster](https://github.com/user-attachments/assets/3526e943-f7bd-4c25-88ec-672a1ebd0433)
 
-
 ## Dependencies
 For this project we have simplified the installation dependencies with containarized installation. We have seperate containers for training the GSplat and for filtering safe trajectories.
 
@@ -175,3 +174,9 @@ python3 visualize.py
 ```
 
 You can observe the trajectories on viser. Furthermore, if you would like to exectue these trajectories you may write a simple waypoint follower for your robot to track the save trajectory inside the traj/ folder.
+
+## Simulation Results
+
+![Stonehenge Screenshot Apr 19 2025](https://github.com/user-attachments/assets/5fecad35-ac8e-4ff1-80dc-e7cc3cdbac20) ![Stonehenge Screenshot Apr 19 2025 (1)](https://github.com/user-attachments/assets/122ca5d6-74c3-4036-911d-eeae8dd85b14)
+
+
