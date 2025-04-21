@@ -95,7 +95,7 @@ ros2 bag record \
 -o <bag_name>
 ```
 
-## Training using GSplat
+## GSplat Training
 
 Copy the bag file to your laptop inside the colcon_ws/ of ActiveSplat folder. Then on your laptop initialize the Active Splat container on two terminals using:
 
@@ -122,4 +122,9 @@ After some initialization a message will appear stating that (NerfBridge) Images
 Now press the spacebar key to start playing the rosbag [Terminal 1]. Once the pre-training image buffer is filled (defaults to 10 images) then training should commence, and the usual Nerfstudio print messages will appear in Terminal 2.
 
 After the rosbag finishes playing NerfBridge will continue training the model on all of the data that it has recieved, but no new data will be added. Feel free to take images and video renders of your newly trained model.
+
+## Running safety filter
+
+The below example is demonstrated for single-integrator dynamics which is ideal for mobile robots. If you want to explore double-integrator check out the instructions by [safer-splat]([https://github.com/chengine/safer-splat/tree/master]) authors.
+
 
