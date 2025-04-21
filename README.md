@@ -19,4 +19,29 @@ cd SafeSplat/colcon_ws/src
 git submodule update --init --recursive
 ```
 
+Now build the Active Splat container for training:
 
+```
+cd ~/ActiveSplat
+docker compose build
+docker compose up -d
+```
+
+Similarly to build the Safe Splat container:
+
+```
+cd ~/SafeSplat
+docker compose build
+docker compose up -d
+```
+
+### On Jetson
+
+```
+git clone -b jetson https://github.com/kalebbennaveed/ActiveSplat.git
+cd ActiveSplat
+docker compose build
+docker compose up -d
+```
+
+To build NVSLAM container follow the instructions on 
