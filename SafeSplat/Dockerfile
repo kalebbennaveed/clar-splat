@@ -24,7 +24,6 @@ SHELL ["/bin/bash", "-c"]
 
 CMD ["python3"]
 
-
 # Downgrade setuptools to a compatible version
 RUN python3 -m pip install setuptools==58.2.0
 RUN python3 -m pip install --user -U empy pyros-genmsg
@@ -62,21 +61,17 @@ ENV TCNN_CUDA_ARCHITECTURES=80
 # # Install TinyCUDANN dependency
 RUN python3 -m pip install ninja git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
 
-
 # Install pyliblzfse separately
 RUN pip install --no-cache-dir pyliblzfse
-
 
 WORKDIR /home/colcon_ws
 
 RUN apt update
 RUN apt install -y libgl1
 
-
 ARG CUDA_ARCHITECTURES="90;89;86;80;75;70;61"
 RUN pip install cv_bridge
 RUN pip uninstall gsplat -y
-
 
 RUN export TORCH_CUDA_ARCH_LIST="$(echo "$CUDA_ARCHITECTURES" | tr ';' '\n' | awk '$0 > 70 {print substr($0,1,1)"."substr($0,2)}' | tr '\n' ' ' | sed 's/ $//')" && \
     export MAX_JOBS=4 && \
@@ -85,11 +80,15 @@ RUN export TORCH_CUDA_ARCH_LIST="$(echo "$CUDA_ARCHITECTURES" | tr ';' '\n' | aw
 RUN pip uninstall -y blinker || true
 RUN pip install --ignore-installed blinker
 RUN pip install fire==0.6.0  # Use an older, more stable version
-# RUN pip install -e .
 
-RUN pip install gsplat==0.1.6 # Necessary for running the training
+RUN pip install gsplat==0.1.11 
 RUN pip install nerfstudio==1.1.5
 RUN pip install Clarabel==0.10.0 # for solving QP
 RUN pip install viser==0.2.23
 
+# Install NerfBridge
+RUN git clone https://github.com/javieryu/nerf_bridge.git
+WORKDIR /root/nerf_bridge
 
+# Install NerfBridge dependencies
+RUN pip install -e .
