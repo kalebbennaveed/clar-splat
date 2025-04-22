@@ -187,4 +187,9 @@ You can observe the trajectories on viser. Furthermore, if you would like to exe
   <img src="https://github.com/user-attachments/assets/b9b89e52-b069-467c-aeb3-a8b09a8e86b8" width="45%" />
 </p>
 
+## References
 
+[1] T. Chen, A. Swann, J. Yu, O. Shorinwa, R. Murai, M. Kennedy III, and
+M. Schwager, “Safer-splat: A control barrier function for safe navigation
+with online gaussian splatting maps,” arXiv preprint arXiv:2409.09868,
+2024
