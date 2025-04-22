@@ -43,6 +43,12 @@ To build visual SLAM container follow the instructions on [ISAAC ROS Visual SLAM
 
 Note: Make sure to build the repository from source as a few changes are needed to be made in the launch file explained further. And after restarting the docker make sure to follow the build the workspace and source it inside the container.
 
+After initalizing the docker, run the following command, to enable image compression:
+
+```
+sudo apt install ros-humble-image-transport
+```
+
 ## Record Training Data
 
 First let's make some changes to the visual SLAM launch file
