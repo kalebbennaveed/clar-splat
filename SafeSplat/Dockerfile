@@ -90,4 +90,6 @@ RUN pip install fire==0.6.0  # Use an older, more stable version
 RUN pip install gsplat==0.1.6 # Necessary for running the training
 RUN pip install nerfstudio==1.1.5
 RUN pip install Clarabel==0.10.0 # for solving QP
-RUN pip install viser==0.2.7
+RUN pip install viser==0.2.23
+
+
