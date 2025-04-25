@@ -135,7 +135,7 @@ After the rosbag finishes playing NerfBridge will continue training the model on
 
 ## Running safety filter
 
-The below example is demonstrated for single-integrator dynamics which is ideal for mobile robots. If you want to explore double-integrator check out the instructions on [safer-splat](https://github.com/chengine/safer-splat/tree/master). We will similarly run the Safe Splat container and perforns steps to run various trajectories, perform filteration adn finally visualize them.
+The below example is demonstrated for single-integrator dynamics which is ideal for mobile robots. If you want to explore double-integrator check out the instructions on [safer-splat](https://github.com/chengine/safer-splat/tree/master). We will similarly run the Safe Splat container and perforns steps to run various trajectories, perform filteration and finally visualize them.
 
 ```
 cd ~/clar-splat/SafeSplat/
